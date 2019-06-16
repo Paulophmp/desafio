@@ -1,13 +1,14 @@
 @if($pedidos->isEmpty())
-    <div class="alert alert-info text-center">Nenhum pedido cadastrado</div>
+    <div class="alert alert-danger text-center">Nenhum pedido cadastrado</div>
 @else
 <div class="table-responsive">
     <table class="table" id="pedidos-table">
         <thead>
             <tr>
                 <th>Produto</th>
-        <th>Valor</th>
-        <th>Data Pedido</th>
+                <th>Valor</th>
+                <th>Data Pedido</th>
+                <th>Solicitante</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -15,7 +16,9 @@
         @foreach($pedidos as $pedido)
             <tr>
                 <td>{!! $pedido->produto !!}</td>
-            <td>{!! $pedido->valor !!}</td>
+                <td>{!! $pedido->valor !!}</td>
+                <td>{!! $pedido->data_pedido !!}</td>
+                <td>{!! $pedido->nome !!}</td>
                 <td>
                     {!! Form::open(['route' => ['pedidos.destroy', $pedido->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

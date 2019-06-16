@@ -4,21 +4,18 @@
     <p>{!! $produto->id !!}</p>
 </div>
 
-<!-- Created At Field -->
+<div class="form-group">
+    {!! Form::label('Produto', 'Produto:') !!}
+    <p>{!! $produto->name !!}</p>
+</div>
+
+<div class="form-group">
+    {!! Form::label('valor', 'Valor:') !!}
+    <p>{!! $produto->valor !!}</p>
+</div>
+
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $produto->created_at !!}</p>
-</div>
-
-<!-- Updated At Field -->
-<div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{!! $produto->updated_at !!}</p>
-</div>
-
-<!-- Deleted At Field -->
-<div class="form-group">
-    {!! Form::label('deleted_at', 'Deleted At:') !!}
-    <p>{!! $produto->deleted_at !!}</p>
+    <p>{!! $produto->qtd_estoque !!}</p>
 </div>
 
