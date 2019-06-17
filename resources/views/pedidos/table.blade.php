@@ -15,10 +15,10 @@
         <tbody>
         @foreach($pedidos as $pedido)
             <tr>
-                <td>{!! $pedido->produto !!}</td>
+                <td>{!! $pedido->produto_name !!}</td>
                 <td>{!! $pedido->valor !!}</td>
-                <td>{!! $pedido->data_pedido !!}</td>
-                <td>{!! $pedido->nome !!}</td>
+                <td>{!! date('d-m-Y', strtotime($pedido->data_pedido)) !!}</td>
+                <td>{!! $pedido->name !!}</td>
                 <td>
                     {!! Form::open(['route' => ['pedidos.destroy', $pedido->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

@@ -1,19 +1,19 @@
 <!-- Produto Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('produto', 'Produto:') !!}
-    {!! Form::select('produto',['Albania' => 'Albania','Kosovo'=>'Kosovo','Germany'=>'Germany','France'=>'France'],'produto',['class'=>'form-control','placeholder'=>'Select Country']) !!}
+    {!! Form::label('produto_name', 'Produto:') !!}
+    {!! Form::select('produto_name',['Albania' => 'Albania','Kosovo'=>'Kosovo','Germany'=>'Germany','France'=>'France'],'produto_name',['class'=>'form-control','placeholder'=>'Select Country']) !!}
 </div>
 
 <!-- nome Pedido Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('nome', 'Nome Solicitante:') !!}
-    {!! Form::text('nome', null, ['class' => 'form-control']) !!}
+    {!! Form::label('name', 'Nome Solicitante:') !!}
+    {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Valor Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('valor', 'Valor:') !!}
-    {!! Form::text('valor', '', ['class' => 'form-control']) !!}
+    {!! Form::text('valor', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Data Pedido Field -->
