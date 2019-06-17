@@ -1,6 +1,6 @@
 
 @if($produtos->isEmpty())
-    <div class="alert alert-info text-center">Nenhum produto cadastrado</div>
+    <div class="alert alert-danger text-center">Nenhum produto cadastrado</div>
 @else
 
 <div class="table-responsive">
@@ -16,21 +16,9 @@
         <tbody>
         @foreach($produtos as $produto)
             <tr>
-                <td>
-                    <div class="form-group">
-                        <?php echo $produto->name ?>
-                    </div>
-                </td>
-                <td>
-                    <div class="form-group">
-                        <?php echo $produto->valor ?>
-                    </div>
-                </td>
-                <td>
-                    <div class="form-group">
-                        <?php echo $produto->qtd_estoque ?>
-                    </div>
-                </td>
+                <td>{!! $produto->name !!}</td>
+                <td>{!! $produto->valor !!}</td>
+                <td>{!! $produto->qtd_estoque !!}</td>
                 <td>
                     {!! Form::open(['route' => ['produtos.destroy', $produto->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

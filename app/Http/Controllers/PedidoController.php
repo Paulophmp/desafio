@@ -57,7 +57,7 @@ class PedidoController extends AppBaseController
     public function store(CreatePedidoRequest $request)
     {
         $input = $request->all();
-
+//dd($input);
         $pedido = $this->pedidoRepository->create($input);
 
         Flash::success('Pedido saved successfully.');

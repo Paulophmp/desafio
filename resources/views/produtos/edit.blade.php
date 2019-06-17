@@ -14,11 +14,6 @@
                    {!! Form::model($produto, ['route' => ['produtos.update', $produto->id], 'method' => 'patch']) !!}
 
 
-                   <div class="form-group col-sm-6">
-                       {!! Form::label('nome', 'Nome:') !!}
-                       {!! Form::text('nome', $produto->name, ['class'=>'form-control']) !!}
-                   </div>
-
                         @include('produtos.fields')
 
                    {!! Form::close() !!}

@@ -14,23 +14,6 @@
                 <div class="form-group">
                     {!! Form::open(['route' => 'produtos.store']) !!}
 
-
-                    <div class="form-group col-sm-12">
-                        {!! Form::label('namea', 'Nome:') !!}
-                        {!! Form::text('name', null, ['class'=>'form-control']) !!}
-                    </div>
-
-                    <div class="form-group col-sm-5">
-                        {!! Form::label('valor', 'Valor:') !!}
-                        {!! Form::text('valor', null, ['class'=>'form-control']) !!}
-                    </div>
-
-                    <div class="form-group col-sm-5 ">
-                        {!! Form::label('qtd_estoque', 'Quantidade Estoque:') !!}
-                        {!! Form::text('qtd_estoque', null, ['class'=>'form-control']) !!}
-                    </div>
-
-
                     @include('produtos.fields')
 
                     {!! Form::close() !!}

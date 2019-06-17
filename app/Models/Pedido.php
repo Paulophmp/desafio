@@ -24,9 +24,16 @@ class Pedido extends Model
 
 
     public $fillable = [
-        'produto',
+        'produto_name',
+        'name',
         'valor',
-        'data_pedido'
+        'data_pedido',
+        'cep',
+        'logradouro',
+        'bairro',
+        'uf',
+        'cidade',
+        'despachante'
     ];
 
     /**
