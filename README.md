@@ -8,7 +8,7 @@
 -- Dumped from database version 10.8 (Ubuntu 10.8-0ubuntu0.18.04.1)
 -- Dumped by pg_dump version 10.8 (Ubuntu 10.8-0ubuntu0.18.04.1)
 
--- Started on 2019-06-17 08:56:05 -03
+-- Started on 2019-06-17 09:02:43 -03
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,7 @@ SET row_security = off;
 
 DROP DATABASE db_desafio;
 --
--- TOC entry 2963 (class 1262 OID 16398)
+-- TOC entry 2954 (class 1262 OID 16398)
 -- Name: db_desafio; Type: DATABASE; Schema: -; Owner: usr_desafio
 --
 
@@ -54,7 +54,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2966 (class 0 OID 0)
+-- TOC entry 2957 (class 0 OID 0)
 -- Dependencies: 1
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
@@ -97,7 +97,7 @@ CREATE SEQUENCE public.migrations_id_seq
 ALTER TABLE public.migrations_id_seq OWNER TO usr_desafio;
 
 --
--- TOC entry 2967 (class 0 OID 0)
+-- TOC entry 2958 (class 0 OID 0)
 -- Dependencies: 196
 -- Name: migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: usr_desafio
 --
@@ -160,7 +160,7 @@ CREATE SEQUENCE public.pedidos_id_seq
 ALTER TABLE public.pedidos_id_seq OWNER TO usr_desafio;
 
 --
--- TOC entry 2968 (class 0 OID 0)
+-- TOC entry 2959 (class 0 OID 0)
 -- Dependencies: 203
 -- Name: pedidos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: usr_desafio
 --
@@ -202,7 +202,7 @@ CREATE SEQUENCE public.produtos_id_seq
 ALTER TABLE public.produtos_id_seq OWNER TO usr_desafio;
 
 --
--- TOC entry 2969 (class 0 OID 0)
+-- TOC entry 2960 (class 0 OID 0)
 -- Dependencies: 201
 -- Name: produtos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: usr_desafio
 --
@@ -245,7 +245,7 @@ CREATE SEQUENCE public.users_id_seq
 ALTER TABLE public.users_id_seq OWNER TO usr_desafio;
 
 --
--- TOC entry 2970 (class 0 OID 0)
+-- TOC entry 2961 (class 0 OID 0)
 -- Dependencies: 198
 -- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: usr_desafio
 --
@@ -283,87 +283,6 @@ ALTER TABLE ONLY public.produtos ALTER COLUMN id SET DEFAULT nextval('public.pro
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
-
-
---
--- TOC entry 2950 (class 0 OID 41151)
--- Dependencies: 197
--- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: usr_desafio
---
-
-INSERT INTO public.migrations (id, migration, batch) VALUES (49, '2014_10_12_000000_create_users_table', 1);
-INSERT INTO public.migrations (id, migration, batch) VALUES (50, '2014_10_12_100000_create_password_resets_table', 1);
-INSERT INTO public.migrations (id, migration, batch) VALUES (51, '2019_06_16_030629_create_produto_table', 1);
-INSERT INTO public.migrations (id, migration, batch) VALUES (52, '2019_06_16_052206_create_pedido_table', 1);
-
-
---
--- TOC entry 2953 (class 0 OID 41642)
--- Dependencies: 200
--- Data for Name: password_resets; Type: TABLE DATA; Schema: public; Owner: usr_desafio
---
-
-
-
---
--- TOC entry 2957 (class 0 OID 41659)
--- Dependencies: 204
--- Data for Name: pedidos; Type: TABLE DATA; Schema: public; Owner: usr_desafio
---
-
-
-
---
--- TOC entry 2955 (class 0 OID 41651)
--- Dependencies: 202
--- Data for Name: produtos; Type: TABLE DATA; Schema: public; Owner: usr_desafio
---
-
-INSERT INTO public.produtos (id, name, valor, qtd_estoque, created_at, updated_at) VALUES (1, 'camisa PHP', 26, 12, '2019-06-17 01:42:08', '2019-06-17 01:44:21');
-
-
---
--- TOC entry 2952 (class 0 OID 41631)
--- Dependencies: 199
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: usr_desafio
---
-
-
-
---
--- TOC entry 2971 (class 0 OID 0)
--- Dependencies: 196
--- Name: migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: usr_desafio
---
-
-SELECT pg_catalog.setval('public.migrations_id_seq', 52, true);
-
-
---
--- TOC entry 2972 (class 0 OID 0)
--- Dependencies: 203
--- Name: pedidos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: usr_desafio
---
-
-SELECT pg_catalog.setval('public.pedidos_id_seq', 2, true);
-
-
---
--- TOC entry 2973 (class 0 OID 0)
--- Dependencies: 201
--- Name: produtos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: usr_desafio
---
-
-SELECT pg_catalog.setval('public.produtos_id_seq', 1, true);
-
-
---
--- TOC entry 2974 (class 0 OID 0)
--- Dependencies: 198
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: usr_desafio
---
-
-SELECT pg_catalog.setval('public.users_id_seq', 1, false);
 
 
 --
@@ -420,7 +339,7 @@ CREATE INDEX password_resets_email_index ON public.password_resets USING btree (
 
 
 --
--- TOC entry 2965 (class 0 OID 0)
+-- TOC entry 2956 (class 0 OID 0)
 -- Dependencies: 5
 -- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
 --
@@ -428,7 +347,7 @@ CREATE INDEX password_resets_email_index ON public.password_resets USING btree (
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2019-06-17 08:56:06 -03
+-- Completed on 2019-06-17 09:02:43 -03
 
 --
 -- PostgreSQL database dump complete
