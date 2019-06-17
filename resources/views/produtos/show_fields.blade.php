@@ -15,7 +15,7 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
+    {!! Form::label('created_at', 'Quantidade em estoque') !!}
     <p>{!! $produto->qtd_estoque !!}</p>
 </div>
 
