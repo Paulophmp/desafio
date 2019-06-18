@@ -6,15 +6,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg" class="img-circle"
-                     alt="User Image"/>
+                <img src="{{URL::asset('/img/cooper.jpeg')}}" alt="profile Pic" class="img-circle" height="150" width="150">
             </div>
             <div class="pull-left info">
-                @if (Auth::guest())
-                <p>InfyOm</p>
-                @else
-                    <p>{{ Auth::user()->name}}</p>
-                @endif
+                <p>Paulo Henrique</p>
                 <!-- Status -->
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>

@@ -33,6 +33,7 @@ class Pedido extends Model
         'bairro',
         'uf',
         'cidade',
+        'qtd_estoque',
         'despachante'
     ];
 
