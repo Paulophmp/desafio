@@ -10,6 +10,7 @@ use App\Repositories\PedidoRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 class PedidoController extends AppBaseController
@@ -44,7 +45,12 @@ class PedidoController extends AppBaseController
      */
     public function create()
     {
-        return view('pedidos.create');
+        $produtos = DB::table('produtos')
+            ->select('name', 'qtd_estoque')
+            ->where('qtd_estoque', '>', 0)
+            ->get();
+
+            return view('pedidos.create', compact('produtos'));
     }
 
     /**

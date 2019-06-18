@@ -10,6 +10,7 @@
             <th>Nome</th>
             <th>Valor</th>
             <th>Quantidade em Estoque</th>
+            <th>Situação</th>
             <th colspan="3">Action</th>
         </tr>
         </thead>
@@ -19,6 +20,7 @@
                 <td>{!! $produto->name !!}</td>
                 <td>{!! $produto->valor !!}</td>
                 <td>{!! $produto->qtd_estoque !!}</td>
+                <td>{!! ($produto->qtd_estoque > 0 ? 'Disponível' : 'Indisponível') !!}</td>
                 <td>
                     {!! Form::open(['route' => ['produtos.destroy', $produto->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
