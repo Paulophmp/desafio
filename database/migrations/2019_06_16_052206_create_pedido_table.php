@@ -17,6 +17,7 @@ class CreatePedidoTable extends Migration
             $table->increments('id');
             $table->string('produto_name');
             $table->string('name');
+            $table->integer('qtd_estoque');
             $table->string('valor');
             $table->date('data_pedido');
             $table->string('cep');

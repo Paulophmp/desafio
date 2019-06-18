@@ -1,8 +1,19 @@
-<!-- Produto Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-9">
     {!! Form::label('produto_name', 'Produto:') !!}
-    {!! Form::select('produto_name',['Albania' => 'Albania','Kosovo'=>'Kosovo','Germany'=>'Germany','France'=>'France'],'produto_name',['class'=>'form-control','placeholder'=>'Select Country']) !!}
+    <select name="produto_name" class="form-control">
+        <option value="" disabled selected>Selecione o Produto</option>
+        @foreach($produtos as $produto)
+            <option value="{{ $produto->name }}" > {{ $produto->name }} </option>
+        @endforeach
+    </select>
 </div>
+
+<!-- nome Pedido Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('qtd_estoque', 'Quantidade em estoque:') !!}
+    {!! Form::number('qtd_estoque', null, ['class' => 'form-control']) !!}
+</div>
+
 
 <!-- nome Pedido Field -->
 <div class="form-group col-sm-6">
@@ -19,7 +30,7 @@
 <!-- Data Pedido Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('data_pedido', 'Data Pedido:') !!}
-    {!! Form::text('data_pedido', null, ['class' => 'form-control']) !!}
+    {!! Form::date('data_pedido', null, ['class' => 'form-control']) !!}
 </div>
 
 
